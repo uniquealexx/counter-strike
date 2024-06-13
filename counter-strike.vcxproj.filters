@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\core\core.cpp" />
+    <ClCompile Include="src\utils\console\console.cpp" />
+    <ClCompile Include="dependencies\src\hde\hde32.c" />
+    <ClCompile Include="dependencies\src\hde\hde64.c" />
+    <ClCompile Include="dependencies\src\buffer.c" />
+    <ClCompile Include="dependencies\src\hook.c" />
+    <ClCompile Include="dependencies\src\trampoline.c" />
+    <ClCompile Include="src\core\hooks\hooks.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\includes\includes.h" />
+    <ClInclude Include="src\core\core.h" />
+    <ClInclude Include="src\utils\console\console.h" />
+    <ClInclude Include="src\utils\utils.h" />
+    <ClInclude Include="dependencies\src\hde\hde32.h" />
+    <ClInclude Include="dependencies\src\hde\hde64.h" />
+    <ClInclude Include="dependencies\src\hde\pstdint.h" />
+    <ClInclude Include="dependencies\src\hde\table32.h" />
+    <ClInclude Include="dependencies\src\hde\table64.h" />
+    <ClInclude Include="dependencies\src\buffer.h" />
+    <ClInclude Include="dependencies\src\trampoline.h" />
+    <ClInclude Include="dependencies\include\MinHook.h" />
+    <ClInclude Include="src\core\hooks\hooks.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+  </ItemGroup>
+</Project>
