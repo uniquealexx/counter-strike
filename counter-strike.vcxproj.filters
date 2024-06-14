@@ -27,6 +27,9 @@
     <ClInclude Include="dependencies\include\MinHook.h" />
     <ClInclude Include="src\core\hooks\hooks.h" />
     <ClInclude Include="src\utils\memory\memory.h" />
+    <ClInclude Include="src\sdk\interfaces\appsystem.h" />
+    <ClInclude Include="src\sdk\interfaces\source2client.h" />
+    <ClInclude Include="src\sdk\interfaces\source2engine.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

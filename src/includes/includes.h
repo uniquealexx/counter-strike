@@ -17,9 +17,16 @@
 #include "../../dependencies/include/MinHook.h"
 #include "../../dependencies/src/buffer.h"
 
+// sdk includes
+#include "../sdk/interfaces/appsystem.h"
+#include "../sdk/interfaces/source2client.h"
+#include "../sdk/interfaces/source2engine.h"
+
 // project includes
-#include "../core/core.h"
 #include "../utils/utils.h"
+#include "../core/core.h"
 
 #include "../core/hooks/hooks.h"
+
+
 

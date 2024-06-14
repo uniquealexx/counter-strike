@@ -7,7 +7,7 @@ PEB* GetProcessEnvironmentBlock()
 
 Address_t Memory::GetModuleBaseAddress(std::string_view moduleName)
 {
-	std::unique_ptr wideString = std::make_unique< std::wstring_view::value_type[] >(moduleName.length());
+	std::unique_ptr wideString = std::make_unique<std::wstring_view::value_type[]>(moduleName.length());
 	std::size_t length = std::mbstowcs(wideString.get(), moduleName.data(), moduleName.length());
 	return GetModuleBaseAddress(std::wstring_view(wideString.get(), length));
 }
