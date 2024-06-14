@@ -10,6 +10,7 @@
     <ClCompile Include="dependencies\src\hook.c" />
     <ClCompile Include="dependencies\src\trampoline.c" />
     <ClCompile Include="src\core\hooks\hooks.cpp" />
+    <ClCompile Include="src\utils\memory\memory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\includes\includes.h" />
@@ -25,6 +26,7 @@
     <ClInclude Include="dependencies\src\trampoline.h" />
     <ClInclude Include="dependencies\include\MinHook.h" />
     <ClInclude Include="src\core\hooks\hooks.h" />
+    <ClInclude Include="src\utils\memory\memory.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

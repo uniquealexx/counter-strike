@@ -2,10 +2,14 @@
 
 // standard thread library includes
 #include <Windows.h>
+#include <winternl.h>
 
 #include <thread>
 #include <memory>
+#include <vector>
 #include <format>
+#include <cstdint>
+#include <optional>
 #include <iostream>
 #include <string_view>
 
