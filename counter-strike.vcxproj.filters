@@ -11,6 +11,7 @@
     <ClCompile Include="dependencies\src\trampoline.c" />
     <ClCompile Include="src\core\hooks\hooks.cpp" />
     <ClCompile Include="src\utils\memory\memory.cpp" />
+    <ClCompile Include="src\core\hooks\functions\framestagenotify.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\includes\includes.h" />
