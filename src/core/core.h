@@ -6,10 +6,6 @@ public:
 	Core();
 	~Core();
 
-	// need to fix
-	ISource2Client* pSource2Client;
-	ISource2Engine* pSource2Engine;
-
 private:
 	Address_t GetInterface(std::string_view moduleName, std::string_view interfaceName)
 	{

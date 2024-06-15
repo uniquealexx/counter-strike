@@ -6,12 +6,16 @@ Core::Core()
 	pConsole = std::make_unique<Console>();
 	pConsole->DebugOutput("~", "init {} complete", typeid(Console).name());
 #endif // _DEBUG
-	pSource2Client = GetInterface("client.dll", "Source2Client").Cast<ISource2Client*>();
-	pSource2Engine = GetInterface("engine2.dll", "Source2EngineToClient").Cast<ISource2Engine*>();
+	pInterfaces = std::make_unique<Interfaces>();
+#ifdef _DEBUG
+	pConsole->DebugOutput("~", "init {} complete", typeid(Interfaces).name());
+#endif // _DEBUG
+	pInterfaces->pSource2Client = GetInterface("client.dll", "Source2Client").Cast<ISource2Client*>();
+	pInterfaces->pSource2Engine = GetInterface("engine2.dll", "Source2EngineToClient").Cast<ISource2Engine*>();
 #ifdef _DEBUG
 	pConsole->DebugOutput("~", "init {} complete", typeid(Core).name());
 #endif // _DEBUG
-;	pHooks = std::make_unique<Hooks>();
+	pHooks = std::make_unique<Hooks>();
 #ifdef _DEBUG
 	pConsole->DebugOutput("~", "init {} complete", typeid(Hooks).name());
 #endif // _DEBUG

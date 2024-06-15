@@ -154,6 +154,7 @@
     <ClInclude Include="src\core\hooks\hooks.h" />
     <ClInclude Include="src\includes\includes.h" />
     <ClInclude Include="src\sdk\interfaces\appsystem.h" />
+    <ClInclude Include="src\sdk\interfaces.h" />
     <ClInclude Include="src\sdk\interfaces\source2client.h" />
     <ClInclude Include="src\sdk\interfaces\source2engine.h" />
     <ClInclude Include="src\utils\console\console.h" />

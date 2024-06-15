@@ -22,11 +22,14 @@
 #include "../sdk/interfaces/source2client.h"
 #include "../sdk/interfaces/source2engine.h"
 
+#include "../sdk/interfaces.h"
+
 // project includes
 #include "../utils/utils.h"
-#include "../core/core.h"
 
 #include "../core/hooks/hooks.h"
+#include "../core/core.h"
+
 
 
 
