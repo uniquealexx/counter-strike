@@ -53,20 +53,18 @@ private:
 class Memory
 {
 public:
-	Address_t GetModuleBaseAddress(std::string_view moduleName);
-	Address_t GetModuleBaseAddress(std::wstring_view moduleName);
+	static Address_t GetModuleBaseAddress(std::string_view moduleName);
+	static Address_t GetModuleBaseAddress(std::wstring_view moduleName);
 
-	Address_t GetExportAddress(Address_t moduleBaseAddress, std::string_view procedureName);
+	static Address_t GetExportAddress(Address_t moduleBaseAddress, std::string_view procedureName);
 
-	bool GetSectionInfo(Address_t moduleAddress, std::string_view sectionName, Address_t* outSectionAddress, std::size_t* outSectionSize);
+	static bool GetSectionInfo(Address_t moduleAddress, std::string_view sectionName, Address_t* outSectionAddress, std::size_t* outSectionSize);
 
-	Address_t FindPattern(std::string_view moduleName, std::string_view pattern);
-	Address_t FindPattern(Address_t regionAddress, std::size_t regionSize, std::string_view pattern);
+	static Address_t FindPattern(std::string_view moduleName, std::string_view pattern);
+	static Address_t FindPattern(Address_t regionAddress, std::size_t regionSize, std::string_view pattern);
 
-	std::vector<std::optional<std::byte>> PatternToBytes(std::string_view pattern);
+	static std::vector<std::optional<std::byte>> PatternToBytes(std::string_view pattern);
 
 private:
 
 };
-
-inline std::unique_ptr<Memory> pMemory = nullptr;

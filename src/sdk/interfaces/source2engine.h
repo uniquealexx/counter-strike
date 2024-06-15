@@ -1,6 +1,6 @@
 #pragma once
 
-class ISource2Engine
+class ISource2Engine : public IAppSystem
 {
 	ISource2Engine() = delete;
 	ISource2Engine(ISource2Engine&&) = delete;

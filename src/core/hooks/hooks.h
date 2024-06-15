@@ -2,9 +2,6 @@
 
 class Hooks
 {
-private:
-	static void FrameStageNotify(ISource2Client* pSource2Client, int iFrameStage);
-
 public:
 	Hooks();
 	~Hooks();
@@ -27,6 +24,7 @@ private:
 
 private:
 #pragma region virtual_hook
+	static void FrameStageNotify(ISource2Client* pSource2Client, int iFrameStage);
 	static inline decltype(&FrameStageNotify) pfnFrameStageNotify = nullptr;
 #pragma endregion
 
