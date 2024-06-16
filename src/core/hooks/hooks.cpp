@@ -4,7 +4,14 @@ Hooks::Hooks()
 {
 	MH_Initialize();
 
-	pfnFrameStageNotify = CreateVirtualHook<decltype(&FrameStageNotify)>(pInterfaces->pSource2Client, 33, &FrameStageNotify);
+#pragma region virtual_hooks
+	fnFrameStageNotify = CreateVirtualHook<decltype(&FrameStageNotify)>(pInterfaces->pSource2Client, 33, &FrameStageNotify);
+#pragma endregion
+
+#pragma region detour_hooks
+	fnPresent = CreateHook<decltype(&Present)>(pDisplacement->IDXGISwapChain->Present, &Present);
+	fnResizeBuffers = CreateHook<decltype(&ResizeBuffers)>(pDisplacement->IDXGISwapChain->ResizeBuffers, &ResizeBuffers);
+#pragma endregion
 
 	MH_EnableHook(MH_ALL_HOOKS);
 }

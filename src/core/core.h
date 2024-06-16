@@ -4,8 +4,9 @@ class Core
 {
 public:
 	Core();
+#ifdef _DEBUG
 	~Core();
-
+#endif
 private:
 
 };

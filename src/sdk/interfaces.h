@@ -7,19 +7,16 @@ public:
 	{
 		pSource2Client = GetInterface("client.dll", "Source2Client").Cast<ISource2Client*>();
 		pSource2Engine = GetInterface("engine2.dll", "Source2EngineToClient").Cast<ISource2Engine*>();
+
+		pRenderDeviceDx11 = pDisplacement->Interfaces->RenderDeviceDx11.Get().Cast<IRenderDeviceDx11*>();
 	}
 
-	~Interfaces()
-	{
-		delete pSource2Client;
-		delete pSource2Engine;
-	}
-
-	ISource2Client* pSource2Client = nullptr;;
-	ISource2Engine* pSource2Engine = nullptr;;
+	ISource2Client* pSource2Client = nullptr;
+	ISource2Engine* pSource2Engine = nullptr;
+	IRenderDeviceDx11* pRenderDeviceDx11 = nullptr;
 
 private:
-	Address_t GetInterface(std::string_view moduleName, std::string_view interfaceName)
+	static Address_t GetInterface(std::string_view moduleName, std::string_view interfaceName)
 	{
 		class InterfaceRegister
 		{

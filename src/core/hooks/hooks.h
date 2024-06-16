@@ -25,11 +25,15 @@ private:
 private:
 #pragma region virtual_hook
 	static void FrameStageNotify(ISource2Client* pSource2Client, int iFrameStage);
-	static inline decltype(&FrameStageNotify) pfnFrameStageNotify = nullptr;
+	static inline decltype(&FrameStageNotify) fnFrameStageNotify = nullptr;
 #pragma endregion
 
 #pragma region detour_hook
+	static std::int32_t Present(IDXGISwapChain* swapChain, std::uint32_t syncInterval, std::uint32_t flags);
+	static inline decltype(&Present) fnPresent = nullptr;
 
+	static std::int32_t ResizeBuffers(IDXGISwapChain* swapChain, std::uint32_t bufferCount, std::uint32_t width, std::uint32_t height, std::int32_t newFormat, std::uint32_t swapChainFlags);
+	static inline decltype(&ResizeBuffers) fnResizeBuffers = nullptr;
 #pragma endregion
 
 };
